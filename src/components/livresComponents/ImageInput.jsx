@@ -34,7 +34,8 @@ const ImageInput = ({ files, setFiles, setCouverture, type }) => {
             .then((response) => response.data)
             .then((data) => {
               console.log(data)
-              setCouverture(data.url)
+              setCouverture(data.secure_url)
+              // setCouverture(data.url)
               load(data)
             })
             .catch((error) => {
